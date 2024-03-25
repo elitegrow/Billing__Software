@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
+import './Aside.css'
 
 const Aside = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <>
     {/* <!-- ======= Header ======= --> */}
@@ -12,7 +18,7 @@ const Aside = () => {
         <img src="assets/img/logo.png" alt=""/>
         <span class="d-none d-lg-block">Billing Software</span>
       </a>
-      <i class="bi bi-list toggle-sidebar-btn"></i>
+      <i class="bi bi-list toggle-sidebar-btn" onClick={toggleSidebar}></i>
     </div>
     {/* <!-- End Logo --> */}
 
@@ -248,7 +254,7 @@ const Aside = () => {
   {/* <!-- End Header --> */}
 
      {/* <!-- ======= Sidebar ======= --> */}
-  <aside id="sidebar" class="sidebar">
+  <aside id="sidebar" class={`sidebar ${isOpen ? 'open' : ''}`}>
 
     <ul class="sidebar-nav" id="sidebar-nav">
 
@@ -522,62 +528,7 @@ const Aside = () => {
 
       <li class="nav-heading">Pages</li>
 
-      {/* <li class="nav-item">
-        <a class="nav-link collapsed" href="users-profile.html">
-          <i class="bi bi-person"></i>
-          <span>Profile</span>
-        </a>
-      </li> */}
-      {/* <!-- End Profile Page Nav --> */}
-
-      {/* <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-faq.html">
-          <i class="bi bi-question-circle"></i>
-          <span>F.A.Q</span>
-        </a>
-      </li> */}
-      {/* <!-- End F.A.Q Page Nav --> */}
-
-      {/* <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-contact.html">
-          <i class="bi bi-envelope"></i>
-          <span>Contact</span>
-        </a>
-      </li> */}
-      {/* <!-- End Contact Page Nav --> */}
-
-      {/* <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-register.html">
-          <i class="bi bi-card-list"></i>
-          <span>Register</span>
-        </a>
-      </li> */}
-      {/* <!-- End Register Page Nav --> */}
-
-      <li class="nav-item">
-        <Link class="nav-link collapsed" to={"/Login"}>
-          <i class="bi bi-box-arrow-in-right"></i>
-          <span>Login</span>
-        </Link>
-      </li>
-      {/* <!-- End Login Page Nav --> */}
-
-      {/* <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-error-404.html">
-          <i class="bi bi-dash-circle"></i>
-          <span>Error 404</span>
-        </a>
-      </li> */}
-      {/* <!-- End Error 404 Page Nav --> */}
-
-      {/* <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-blank.html">
-          <i class="bi bi-file-earmark"></i>
-          <span>Blank</span>
-        </a>
-      </li> */}
-      {/* <!-- End Blank Page Nav --> */}
-
+      
     </ul>
 
   </aside>

@@ -13,6 +13,7 @@ import Reports from './Components/Entry/Reports';
 import Stockrawmaterials from './Components/Stock/Stockrawmaterials';
 import Finishedgoods from './Components/Stock/Finishedgoods';
 import Login from './Components/Regform/Login';
+import Companyadd from './Components/Master/Addnew/Companyadd'
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="/Stockrawmaterials" element={<Stockrawmaterials />} />
           <Route path="/Finishedgoods" element={<Finishedgoods />} />
           <Route path="/Login" element={<Login />} />
+          <Route path="/Companyadd" element={<Companyadd />} />
 
 
 

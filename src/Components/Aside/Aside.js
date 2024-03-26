@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom'
 import './Aside.css'
 
 const Aside = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
 
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
-  };
+  // const toggleSidebar = () => {
+  //   setIsOpen(!isOpen);
+  // };
   return (
     <>
     {/* <!-- ======= Header ======= --> */}
@@ -18,7 +18,7 @@ const Aside = () => {
         <img src="assets/img/logo.png" alt=""/>
         <span class="d-none d-lg-block">Billing Software</span>
       </a>
-      <i class="bi bi-list toggle-sidebar-btn" onClick={toggleSidebar}></i>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
     </div>
     {/* <!-- End Logo --> */}
 
@@ -254,7 +254,7 @@ const Aside = () => {
   {/* <!-- End Header --> */}
 
      {/* <!-- ======= Sidebar ======= --> */}
-  <aside id="sidebar" class={`sidebar ${isOpen ? 'open' : ''}`}>
+  <aside id="sidebar" class={'sidebar '}>
 
     <ul class="sidebar-nav" id="sidebar-nav">
 

@@ -1,79 +1,80 @@
+
 import React from 'react'
 import Aside from '../Aside/Aside'
+import { Link } from "react-router-dom";
+import { IoMdAdd } from "react-icons/io";
+import { MdModeEdit } from "react-icons/md";
+import { FaTrash } from "react-icons/fa";
+import { FaBuilding } from "react-icons/fa";
+
 
 const Finishedgoods = () => {
-  return (
-    <>
-    <>
-    <div class="layout-wrapper layout-content-navbar main" id='main'>
+    return (
+        <div class="layout-wrapper layout-content-navbar main" id='main'>
         <div class="layout-container">
             <Aside />
             <nav class="navbar navbar-light nav-head mt-2 rounded">
-                <span class="navbar-brand nav-text mb-0 h1 px-4">Finished Goods</span>
+                <span class="navbar-brand nav-text mb-0 h1 px-4"> <FaBuilding />&nbsp;Finished Goods</span>
             </nav>
             <div class="content-wrapper">
                 <div class="container-xxl flex-grow-1 container-p-y">
     
-                <div class="row">
-                    <div class="col-xl">
-                        <div class="card mt-3">
-                            <div class="card-body pt-3">
-                                <form id="addEditForm" name="addEditForm" action="" method="POST" enctype="multipart/form-data">
-                                                        
-                                    
-                                    <div class="mb-3 text-start">
+    
+    <div class="row">
+        <div className='col-md-12 mt-4 mb-4 text-start'> 
+        
+        <Link to='/Finishedgoodsadd' className='btn btn-primary  '> <IoMdAdd /> Add New</Link> 
+        </div>
 
-                                        <label class="form-label" for="religion_name">Opening Stock <span class="Form__Error">*</span></label>
-
-                                        <input type="text" required="" class="form-control  required" id="religion_name" name="religion_name" placeholder="Opening Stock" />
-
-                                    </div>
-                                    <div class="mb-3 text-start">
-
-                                        <label class="form-label" for="religion_name">Production <span class="Form__Error">*</span></label>
-
-                                        <input type="text" required="" class="form-control required" id="religion_name" name="religion_name" placeholder="Production" />
-
-                                    </div>
-                                    
-                                    <div class="mb-3 text-start">
-
-                                    <label class="form-label" for="religion_name">Wastages <span class="Form__Error">*</span></label>
-
-                                    <input type="text" required="" class="form-control required" id="religion_name" name="religion_name" placeholder="Wastages" />
-
-                                    </div>
-
-                                    <div class="mb-3 text-start">
-
-                                    <label class="form-label" for="religion_name">Excess <span class="Form__Error">*</span></label>
-
-                                    <input type="text" required="" class="form-control required" id="religion_name" name="religion_name" placeholder="Excess" />
-
-                                    </div>
-
-                                    <div class="mb-3 text-start">
-
-                                    <label class="form-label" for="religion_name">Report <span class="Form__Error">*</span></label>
-
-                                    <input type="text" required="" class="form-control required" id="religion_name" name="religion_name" placeholder="Report" />
-
-                                    </div>
-
-                                    <input type="hidden" name="callbackUrl" id="callbackUrl" value="admin.religion.index"/><input type="hidden" name="mode" id="mode" value="add"/>                        <button type="submit" class="btn btn-primary formSubmitBtn" id="formSubmitBtn">Submit</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <table class="table border rounded">
+  <thead className='theading'>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Opening Stock</th>
+      <th scope="col">Production</th>
+      <th scope="col">Wastages</th>
+      <th scope="col">Excess</th>
+      <th scope="col">Report</th>
+      <th scope="col">Action </th>
+    </tr>
+  </thead>
+  <tbody className='tbody'>
+    <tr>
+      <td scope="row">1</td>
+      <td>Stock1</td>
+      <td>Production1</td>
+      <td>Wastage1</td>
+      <td>Excess1</td>
+      <td>Report1</td>
+      <td><MdModeEdit /> / <FaTrash /></td>
+    </tr>
+    <tr>
+      <td scope="row">1</td>
+      <td>Stock1</td>
+      <td>Production1</td>
+      <td>Wastage1</td>
+      <td>Excess1</td>
+      <td>Report1</td>
+      <td><MdModeEdit /> / <FaTrash /></td>
+    </tr>
+    <tr>
+      <td scope="row">1</td>
+      <td>Stock1</td>
+      <td>Production1</td>
+      <td>Wastage1</td>
+      <td>Excess1</td>
+      <td>Report1</td>
+      <td><MdModeEdit /> / <FaTrash /></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+</div>
             
             </div>
         </div>
     </div> 
-    </>
-    </>
-  )
+    )
 }
 
 export default Finishedgoods

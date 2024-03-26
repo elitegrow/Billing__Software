@@ -26,7 +26,7 @@ const Company = () => {
         </div>
 
         <table class="table border rounded">
-  <thead>
+  <thead className='theading'>
     <tr>
       <th scope="col">#</th>
       <th scope="col">Company Name</th>
@@ -37,9 +37,9 @@ const Company = () => {
       <th scope="col">Action</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody className='tbody'>
     <tr>
-      <th scope="row">1</th>
+      <td scope="row">1</td>
       <td>Barbikan</td>
       <td>Sivakasi</td>
       <td>8767854743</td>
@@ -48,7 +48,7 @@ const Company = () => {
       <td><MdModeEdit /> / <FaTrash /></td>
     </tr>
     <tr>
-      <th scope="row">2</th>
+      <td scope="row">2</td>
       <td>Elitegrow</td>
       <td>Chennai</td>
       <td>8767854743</td>
@@ -57,7 +57,7 @@ const Company = () => {
       <td><MdModeEdit /> / <FaTrash /></td>
     </tr>
     <tr>
-      <th scope="row">3</th>
+      <td scope="row">3</td>
       <td>Google</td>
       <td>Madurai</td>
       <td>8767854743</td>
